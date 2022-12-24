@@ -1,0 +1,89 @@
+---
+export interface Props{
+  additionalClass?: string
+}
+const { additionalClass } = Astro.props
+---
+
+<div id='menuIcon' class={`chatSide__openContainer items-center flex bg-transparent h-10 justify-center overflow-hidden p-1 rounded w-10 ${additionalClass}`}>
+	<span class='w-8 h-1 bg-white absolute rounded-xl'></span>
+	<span class='w-8 h-1 bg-white absolute rounded-xl'></span>
+	<span class='w-8 h-1 bg-white absolute rounded-xl'></span>
+</div>
+
+<script>
+const $menuIcon = document.querySelector('#menuIcon') as Element
+$menuIcon.addEventListener('click', () => {
+	$menuIcon.classList.toggle('chatSide__closeContainer')
+	$menuIcon.classList.toggle('chatSide__openContainer')
+})
+</script>
+
+<style>
+ .chatSide__closeContainer,
+.chatSide__openContainer {
+  transition: transform 0.3s ease-out, background-color 0.3s ease-in;
+}
+
+.chatSide__openContainer {
+  justify-content: flex-start;
+}
+
+.chatSide__closeContainer:hover span:nth-child(1) {
+  transform: rotateZ(135deg);
+}
+.chatSide__closeContainer:hover span:nth-child(2) {
+  transform: rotateZ(45deg);
+}
+
+.chatSide__closeContainer span,
+.chatSide__openContainer span {
+  transition: transform 0.3s, background-color 0.3s, width 0.3s;
+}
+
+.chatSide__closeContainer:hover span {
+  background-color: crimson;
+}
+
+.chatSide__closeContainer span:nth-child(1) {
+  transform: rotateZ(45deg);
+}
+
+.chatSide__closeContainer span:nth-child(2) {
+  transform: rotateZ(-45deg);
+}
+.chatSide__closeContainer span:nth-child(3) {
+  display: none;
+}
+
+.chatSide__openContainer span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 20px;
+}
+
+.chatSide__openContainer span:nth-child(2) {
+  transform: translateY(10px);
+  width: 10px;
+}
+
+.chatSide__openContainer:hover, .chatSide__closeContainer:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chatSide__openContainer:hover span {
+  background: rgb(255 204 244);
+}
+
+.chatSide__openContainer:hover span:nth-child(1) {
+  transform: translateX(10px) translateY(-10px);
+}
+
+.chatSide__openContainer:hover span:nth-child(2) {
+  transform: translateX(20px) translateY(10px);
+}
+
+.chatSide__openContainer:hover span:nth-child(3) {
+  width: 15px;
+  background-color: rgb(234 96 211);
+}
+</style>

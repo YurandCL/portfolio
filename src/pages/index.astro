@@ -1,0 +1,279 @@
+---
+import GitHub from '@assets/icons/GitHub.astro'
+import Gmail from '@assets/icons/Gmail.astro'
+import Linkedin from '@assets/icons/Linkedin.astro'
+import Card from '@components/Card.astro'
+import ContactForm from '@components/ContactForm.astro'
+import MasonryContainer from '@components/MasonryContainer.astro'
+import MasonryItem from '@components/MasonryItem.astro'
+import Section from '@components/Section.astro'
+import Layout from '@layouts/Layout.astro'
+
+const experiences = [
+	{
+		author: 'Valtech',
+		startDate: 'septiembre/2022',
+		endDate: '--',
+		id: 'alkjal39apafims',
+		url: 'https://www.valtech.com/es-ar/',
+		image: '/enterprices/valtech-logo.svg',
+		country: 'Argentina',
+		rol: 'Frontend | e-commerce',
+		title: 'Desarrollador Frontend Commerce',
+		tags: [
+			{
+				name: 'React',
+				highlight: true
+			},
+			{
+				name: 'vtex',
+				highlight: true
+			},
+			{
+				name: 'vtex IO',
+				highlight: true
+			},
+			{
+				name: 'typescript',
+				highlight: false
+			},
+			{
+				name: 'GraphQL',
+				highlight: false
+			},
+			{
+				name: 'git',
+				highlight: false
+			},
+			{
+				name: 'javascript',
+				highlight: false
+			},
+			{
+				name: 'HTML',
+				highlight: false
+			},
+			{
+				name: 'CSS',
+				highlight: false
+			}
+		]
+	},
+	{
+		author: 'Tecsup',
+		startDate: 'marzo/2020',
+		endDate: 'mayo/2020',
+		id: '748953hfjkdhkg',
+		url: 'http://www.tecsupdigital.pe/',
+		image: '/enterprices/tecsup-logo.svg',
+		country: 'Perú',
+		rol: 'Game Developer',
+		title: 'Desarrollador Unity',
+		tags: [
+			{
+				name: 'Unity',
+				highlight: true
+			},
+			{
+				name: 'C#',
+				highlight: false
+			},
+			{
+				name: 'Blender',
+				highlight: false
+			},
+			{
+				name: 'git',
+				highlight: false
+			}
+		]
+	},
+	{
+		author: 'SUGO',
+		startDate: 'noviembre/2021',
+		endDate: 'Agosto/2022',
+		id: 'jlkaj5lkaj5lk',
+		url: 'https://www.sugo.pe/',
+		image: '/enterprices/sugo-logo.svg',
+		country: 'Perú | Colombia | México',
+		rol: 'Frontend | e-commerce',
+		title: 'Desarrollador Frontend Commerce',
+		tags: [
+			{
+				name: 'React',
+				highlight: true
+			},
+			{
+				name: 'vtex',
+				highlight: true
+			},
+			{
+				name: 'vtex IO',
+				highlight: true
+			},
+			{
+				name: 'typescript',
+				highlight: true
+			},
+			{
+				name: 'javascript',
+				highlight: false
+			},
+			{
+				name: 'GraphQL',
+				highlight: false
+			},
+			{
+				name: 'git',
+				highlight: false
+			},
+			{
+				name: 'HTML',
+				highlight: false
+			},
+			{
+				name: 'CSS',
+				highlight: false
+			},
+			{
+				name: 'styled components',
+				highlight: false
+			}
+		]
+	},
+	{
+		author: 'Tecsup',
+		startDate: 'mayo/2020',
+		endDate: 'noviembre/2021',
+		id: '3lrjalkjlasd3',
+		url: 'http://www.tecsupdigital.pe/',
+		image: '/enterprices/tecsup-logo.svg',
+		country: 'Perú',
+		rol: 'Frontend',
+		title: 'Desarrollador Frontend',
+		tags: [
+			{
+				name: 'React',
+				highlight: true
+			},
+			{
+				name: 'javascript',
+				highlight: true
+			},
+			{
+				name: 'styled components',
+				highlight: true
+			},
+			{
+				name: 'HTML',
+				highlight: false
+			},
+			{
+				name: 'CSS',
+				highlight: false
+			},
+			{
+				name: 'typescript',
+				highlight: false
+			},
+			{
+				name: 'three js',
+				highlight: false
+			},
+			{
+				name: 'git',
+				highlight: false
+			}
+		]
+	},
+	{
+		author: 'Lobo Sistemas',
+		startDate: 'enero/2019',
+		endDate: 'enero/2019',
+		id: '748953hfjkdhkg',
+		url: 'https://www.lobosistemas.com/',
+		image: '/enterprices/lobosistemas-logo.png',
+		country: 'Perú',
+		rol: 'Backend | Mobile',
+		title: 'Practicante Laravel | Android',
+		tags: [
+			{
+				name: 'Laravel',
+				highlight: true
+			},
+			{
+				name: 'Android',
+				highlight: true
+			},
+			{
+				name: 'php',
+				highlight: false
+			},
+			{
+				name: 'java',
+				highlight: false
+			},
+			{
+				name: 'git',
+				highlight: false
+			}
+		]
+	}
+]
+
+---
+
+<Layout title='Yurand Coloma'>
+	<main class='py-32 px-4'>
+		<Section title='Perfil Profesional'>
+			<div class='flex flex-row gap-28 items-center perfil'>
+				<img src='/assets/yurand.jpg' alt='Yurand Coloma Linares' class='rounded-full w-60 object-cover aspect-square'>
+				<div class='flex gap-2 flex-col'>
+					<h3 class='text-3xl text-primary'>Yurand Coloma Linares</h3>
+					<p class='text-lg'>
+						+3 años de experiencia como desarrollador Front-end. Líder del proyecto feria virtual para Agromin. Mentor de
+						personas, en cuanto a desarrollo y trato con clientes tanto externos como internos.
+					</p>
+					<ul class='flex gap-4 text-accent-500'>
+						<li><a href='https://github.com/YurandCL' target='_blank'><GitHub width={36} height={36}/></a></li>
+						<li><a href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank' ><Linkedin width={36} height={36}/></a></li>
+						<li><a href='mailto:yurandcolomalinares@gmail.com'><Gmail width={36} height={36}/></a></li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+		<Section title='Experiencia Laboral'>
+			<MasonryContainer>
+				{experiences.map((experience) => (
+					<MasonryItem>
+						<Card
+							author={experience.author}
+							startDate={experience.startDate}
+							endDate={experience.endDate}
+							url={experience.url}
+							image={experience.image}
+							country={experience.country}
+							rol={experience.rol}
+							title={experience.title}
+							tags={experience.tags}
+						/>
+					</MasonryItem>
+				))}
+			</MasonryContainer>
+		</Section>
+		<Section title='Contacto'>
+			<ContactForm />
+		</Section>
+	</main>
+</Layout>
+
+<style>
+	@media screen and (max-width: 768px) {
+		.perfil {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+			padding-bottom: 2rem;
+		}
+	}
+</style>

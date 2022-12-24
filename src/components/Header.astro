@@ -1,0 +1,55 @@
+---
+import NavItem from './NavItem.astro'
+const navLinks = [
+	{ title: 'Perfil', url: '#perfil-profesional' },
+	{ title: 'Experiencia', url: '#experiencia-laboral' },
+	{ title: 'Contacto', url: '#contacto' }
+]
+
+---
+
+<header class='sticky top-0 z-10 flex justify-center'>
+	<nav class='absolute flex items-center justify-between m-auto overflow-hidden rounded-lg bg-secondary-500-800 border pr-3 border-accent backdrop-blur-sm  top-4 h-17 max-w-7xl transition-transform duration-300'>
+		<div class='flex items-center h-full px-4 bg-secondary-700'>
+			<a id='logo' href='/'>
+				Yurand Coloma
+			</a>
+		</div>
+		<div id='deskNav' class='hidden md:flex text-lg font-semibold'>
+			{navLinks.map(({ url, title }) => (
+				<NavItem href={url} >{title}</NavItem>
+			))}
+		</div>
+		<div class='flex gap-1 text-lg font-semibold '>
+			<a class='p-2 text-black rounded bg-accent-300 hover:bg-accent-500' href='/cv/profile.pdf' download='cv-yurand-coloma.pdf'>
+				Descargar CV
+			</a>
+		</div>
+	</nav>
+	<div id='mobileNav' class='bg-secondary-900 backdrop-blur-sm flex text-lg font-semibold fixed w-full bottom-0 px-4 py-2 justify-center md:hidden border-accent border-t'>
+		{navLinks.map(({ url, title }) => (
+			<NavItem href={url} >{title}</NavItem>
+		))}
+	</div>
+</header>
+
+<script>
+	const $nav = document.querySelector('nav') as HTMLElement
+	let prevScrollPos = window.pageYOffset
+	window.onscroll = function () {
+		const currentScrollPos = window.pageYOffset
+
+		if (prevScrollPos > currentScrollPos) {
+			$nav.style.transform = 'translateY(1rem)'
+		} else {
+			$nav.style.transform = 'translateY(-100px)'
+		}
+		prevScrollPos = currentScrollPos
+	}
+</script>
+
+<style>
+  nav{
+    width: calc(100% - 2rem);
+  }
+</style>

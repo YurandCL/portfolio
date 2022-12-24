@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-ycl",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@astrojs/react": "1.1.4",
+    "@astrojs/tailwind": "^2.0.1",
+    "astro": "1.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.1.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "astro-robots-txt": "^0.3.10",
+    "eslint": "8.24.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-astro": "0.19.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-promise": "6.0.1",
+    "git-commit-msg-linter": "4.2.1",
+    "husky": "8.0.0",
+    "lint-staged": "13.0.3"
+  },
+  "lint-staged": {
+    "*.{astro,ts,tsx,js,jsx}": "eslint --cache --fix"
+  }
+}
