@@ -1,2 +1,2 @@
-export const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=51960593059&app=facebook&entry_point=page_cta';
-export const WHATSAPP_DEFAULT_MESSAGE = 'Hola,+me+gustaría+contactar+contigo+para+trabajar';
+export const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=51960593059&app=facebook&entry_point=page_cta'
+export const WHATSAPP_DEFAULT_MESSAGE = 'Hola,+me+gustaría+contactar+contigo+para+trabajar'

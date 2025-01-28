@@ -6,7 +6,7 @@ import MasonryContainer from '@components/MasonryContainer.astro'
 import MasonryItem from '@components/MasonryItem.astro'
 import Section from '@components/Section.astro'
 import Layout from '@layouts/Layout.astro'
-import {WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_URL} from '@utils/constants'
+import { WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_URL } from '@utils/constants'
 
 const experiences = [
 	{
@@ -64,7 +64,7 @@ const experiences = [
 			{
 				name: 'git',
 				highlight: false
-			},
+			}
 		]
 	},
 	{
@@ -251,9 +251,9 @@ const experiences = [
 						personas, en cuanto a desarrollo y trato con clientes tanto externos como internos.
 					</p>
 					<ul class='flex gap-4 text-accent-500'>
-						<li><a href='https://github.com/YurandCL' target='_blank'><Icon name="github" width={36} height={36}/></a></li>
-						<li><a href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank' ><Icon name="linkedin" width={36} height={36}/></a></li>
-						<li><a href='mailto:yurandcolomalinares@gmail.com'><Icon name="gmail" width={36} height={36}/></a></li>
+						<li><a href='https://github.com/YurandCL' target='_blank'><Icon name='github' width={36} height={36}/></a></li>
+						<li><a href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank' ><Icon name='linkedin' width={36} height={36}/></a></li>
+						<li><a href='mailto:yurandcolomalinares@gmail.com'><Icon name='gmail' width={36} height={36}/></a></li>
 					</ul>
 				</div>
 			</div>
@@ -278,25 +278,25 @@ const experiences = [
 			</MasonryContainer>
 		</Section>
 
-			<Section title='Contacto'>
-				<div class="flex gap-6 md:flex-row flex-col">
-					<ContactForm />
-					<div class='bg-secondary-500 rounded p-4 w-full grid grid-cols-3 justify-center items-center gap-4 flex-wrap'>
-						<a class="flex items-center gap-1 justify-center" href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank'>
-							LinkedIn: <Icon name="linkedin" width={36} height={36}/>
-						</a>
-						<a class="flex items-center gap-1 justify-center" href='mailto:yurandcolomalinares@gmail.com'>
-							Gmail: <Icon name="gmail" width={36} height={36}/>
-						</a>
-						<a class="flex items-center gap-1 justify-center" href={`${WHATSAPP_URL}&text=${WHATSAPP_DEFAULT_MESSAGE}`} target='_blank'>
-							Whatsapp: <Icon name="whatsapp" width={36} height={36}/>
-						</a>
-						<a class='text-lg col-span-3 text-center font-semibold p-2 text-black rounded bg-accent-300 hover:bg-accent-500' href='/cv/profile.pdf' download='cv-yurand-coloma.pdf'>
+		<Section title='Contacto'>
+			<div class='flex gap-6 md:flex-row flex-col'>
+				<ContactForm />
+				<div class='bg-secondary-500 rounded p-4 w-full grid grid-cols-3 justify-center items-center gap-4 flex-wrap'>
+					<a class='flex items-center gap-1 justify-center' href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank'>
+							LinkedIn: <Icon name='linkedin' width={36} height={36}/>
+					</a>
+					<a class='flex items-center gap-1 justify-center' href='mailto:yurandcolomalinares@gmail.com'>
+							Gmail: <Icon name='gmail' width={36} height={36}/>
+					</a>
+					<a class='flex items-center gap-1 justify-center' href={`${WHATSAPP_URL}&text=${WHATSAPP_DEFAULT_MESSAGE}`} target='_blank'>
+							Whatsapp: <Icon name='whatsapp' width={36} height={36}/>
+					</a>
+					<a class='text-lg col-span-3 text-center font-semibold p-2 text-black rounded bg-accent-300 hover:bg-accent-500' href='/cv/profile.pdf' download='cv-yurand-coloma.pdf'>
 							Descargar CV
-						</a>
-					</div>
+					</a>
 				</div>
-			</Section>
+			</div>
+		</Section>
 
 	</main>
 </Layout>
