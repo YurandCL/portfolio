@@ -35,5 +35,8 @@
   },
   "lint-staged": {
     "*.{astro,ts,tsx,js,jsx}": "eslint --cache --fix"
+  },
+  "engines": {
+    "node": ">20"
   }
 }
