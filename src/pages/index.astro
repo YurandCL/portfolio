@@ -1,37 +1,57 @@
 ---
-import GitHub from '@assets/icons/GitHub.astro'
-import Gmail from '@assets/icons/Gmail.astro'
-import Linkedin from '@assets/icons/Linkedin.astro'
 import Card from '@components/Card.astro'
 import ContactForm from '@components/ContactForm.astro'
+import Icon from '@components/Icon.astro'
 import MasonryContainer from '@components/MasonryContainer.astro'
 import MasonryItem from '@components/MasonryItem.astro'
 import Section from '@components/Section.astro'
 import Layout from '@layouts/Layout.astro'
+import {WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_URL} from '@utils/constants'
 
 const experiences = [
 	{
 		author: 'Valtech',
-		startDate: 'septiembre/2022',
+		startDate: '09/21/2022',
 		endDate: '--',
 		id: 'alkjal39apafims',
 		url: 'https://www.valtech.com/es-ar/',
 		image: '/enterprices/valtech-logo.svg',
-		country: 'Argentina',
+		country: 'Argentina | Chile',
 		rol: 'Frontend | e-commerce',
 		title: 'Desarrollador Frontend Commerce',
+		order: 0,
 		tags: [
 			{
-				name: 'React',
+				name: 'Next JS',
 				highlight: true
+			},
+			{
+				name: 'i18n',
+				highlight: false
+			},
+			{
+				name: 'Axios',
+				highlight: true
+			},
+			{
+				name: 'Tanstack Query',
+				highlight: true
+			},
+			{
+				name: 'Tailwind CSS',
+				highlight: true
+			},
+			{
+				name: 'React',
+				highlight: false
 			},
 			{
 				name: 'vtex',
-				highlight: true
+				highlight: false
 			},
 			{
 				name: 'vtex IO',
-				highlight: true
+				highlight: false
 			},
 			{
 				name: 'typescript',
@@ -45,30 +65,19 @@ const experiences = [
 				name: 'git',
 				highlight: false
 			},
-			{
-				name: 'javascript',
-				highlight: false
-			},
-			{
-				name: 'HTML',
-				highlight: false
-			},
-			{
-				name: 'CSS',
-				highlight: false
-			}
 		]
 	},
 	{
 		author: 'Tecsup',
-		startDate: 'marzo/2020',
-		endDate: 'mayo/2020',
+		startDate: '03/02/2020',
+		endDate: '05/07/2020',
 		id: '748953hfjkdhkg',
 		url: 'http://www.tecsupdigital.pe/',
 		image: '/enterprices/tecsup-logo.svg',
 		country: 'Perú',
 		rol: 'Game Developer',
 		title: 'Desarrollador Unity',
+		order: 3,
 		tags: [
 			{
 				name: 'Unity',
@@ -90,14 +99,15 @@ const experiences = [
 	},
 	{
 		author: 'SUGO',
-		startDate: 'noviembre/2021',
-		endDate: 'Agosto/2022',
+		startDate: '11/15/2021',
+		endDate: '08/16/2022',
 		id: 'jlkaj5lkaj5lk',
-		url: 'https://www.sugo.pe/',
+		url: 'https://zwc.io/overview.php',
 		image: '/enterprices/sugo-logo.svg',
 		country: 'Perú | Colombia | México',
 		rol: 'Frontend | e-commerce',
 		title: 'Desarrollador Frontend Commerce',
+		order: 1,
 		tags: [
 			{
 				name: 'React',
@@ -143,14 +153,15 @@ const experiences = [
 	},
 	{
 		author: 'Tecsup',
-		startDate: 'mayo/2020',
-		endDate: 'noviembre/2021',
+		startDate: '05/08/2020',
+		endDate: '11/14/2021',
 		id: '3lrjalkjlasd3',
 		url: 'http://www.tecsupdigital.pe/',
 		image: '/enterprices/tecsup-logo.svg',
 		country: 'Perú',
 		rol: 'Frontend',
 		title: 'Desarrollador Frontend',
+		order: 2,
 		tags: [
 			{
 				name: 'React',
@@ -183,19 +194,24 @@ const experiences = [
 			{
 				name: 'git',
 				highlight: false
+			},
+			{
+				name: 'i18n',
+				highlight: false
 			}
 		]
 	},
 	{
 		author: 'Lobo Sistemas',
-		startDate: 'enero/2019',
-		endDate: 'enero/2019',
+		startDate: '01/01/2019',
+		endDate: '01/31/2019',
 		id: '748953hfjkdhkg',
 		url: 'https://www.lobosistemas.com/',
 		image: '/enterprices/lobosistemas-logo.png',
 		country: 'Perú',
 		rol: 'Backend | Mobile',
 		title: 'Practicante Laravel | Android',
+		order: 4,
 		tags: [
 			{
 				name: 'Laravel',
@@ -224,20 +240,20 @@ const experiences = [
 ---
 
 <Layout title='Yurand Coloma'>
-	<main class='py-32 px-4'>
+	<main class='py-32 px-4 grid gap-y-12'>
 		<Section title='Perfil Profesional'>
 			<div class='flex flex-row gap-28 items-center perfil'>
 				<img src='/assets/yurand.jpg' alt='Yurand Coloma Linares' class='rounded-full w-60 object-cover aspect-square'>
 				<div class='flex gap-2 flex-col'>
 					<h3 class='text-3xl text-primary'>Yurand Coloma Linares</h3>
 					<p class='text-lg'>
-						+3 años de experiencia como desarrollador Front-end. Líder del proyecto feria virtual para Agromin. Mentor de
+						+5 años de experiencia como desarrollador Front-end. Líder del proyecto feria virtual para Agromin. Mentor de
 						personas, en cuanto a desarrollo y trato con clientes tanto externos como internos.
 					</p>
 					<ul class='flex gap-4 text-accent-500'>
-						<li><a href='https://github.com/YurandCL' target='_blank'><GitHub width={36} height={36}/></a></li>
-						<li><a href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank' ><Linkedin width={36} height={36}/></a></li>
-						<li><a href='mailto:yurandcolomalinares@gmail.com'><Gmail width={36} height={36}/></a></li>
+						<li><a href='https://github.com/YurandCL' target='_blank'><Icon name="github" width={36} height={36}/></a></li>
+						<li><a href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank' ><Icon name="linkedin" width={36} height={36}/></a></li>
+						<li><a href='mailto:yurandcolomalinares@gmail.com'><Icon name="gmail" width={36} height={36}/></a></li>
 					</ul>
 				</div>
 			</div>
@@ -245,7 +261,7 @@ const experiences = [
 		<Section title='Experiencia Laboral'>
 			<MasonryContainer>
 				{experiences.map((experience) => (
-					<MasonryItem>
+					<MasonryItem order={experience.order}>
 						<Card
 							author={experience.author}
 							startDate={experience.startDate}
@@ -261,9 +277,27 @@ const experiences = [
 				))}
 			</MasonryContainer>
 		</Section>
-		<Section title='Contacto'>
-			<ContactForm />
-		</Section>
+
+			<Section title='Contacto'>
+				<div class="flex gap-6 md:flex-row flex-col">
+					<ContactForm />
+					<div class='bg-secondary-500 rounded p-4 w-full grid grid-cols-3 justify-center items-center gap-4 flex-wrap'>
+						<a class="flex items-center gap-1 justify-center" href='https://www.linkedin.com/in/yurand-coloma-linares-b8506318a/' target='_blank'>
+							LinkedIn: <Icon name="linkedin" width={36} height={36}/>
+						</a>
+						<a class="flex items-center gap-1 justify-center" href='mailto:yurandcolomalinares@gmail.com'>
+							Gmail: <Icon name="gmail" width={36} height={36}/>
+						</a>
+						<a class="flex items-center gap-1 justify-center" href={`${WHATSAPP_URL}&text=${WHATSAPP_DEFAULT_MESSAGE}`} target='_blank'>
+							Whatsapp: <Icon name="whatsapp" width={36} height={36}/>
+						</a>
+						<a class='text-lg col-span-3 text-center font-semibold p-2 text-black rounded bg-accent-300 hover:bg-accent-500' href='/cv/profile.pdf' download='cv-yurand-coloma.pdf'>
+							Descargar CV
+						</a>
+					</div>
+				</div>
+			</Section>
+
 	</main>
 </Layout>
 

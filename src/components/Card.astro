@@ -1,4 +1,6 @@
 ---
+import DateTime from './DateTime.astro'
+
 export interface Props{
 	author: string
 	startDate: string
@@ -26,33 +28,33 @@ const { title, url, country, author, startDate, endDate, rol, tags, image = '/to
 		<div class='pt-2 px-6 pb-6'>
 			<h3 class='font-medium text-2xl'>{title}</h3>
 			<h4 class='font-semibold'>Empresa: <span class='uppercase text-primary'>{author}</span></h4>
-			<div class='flex border-y border-secondary-700 my-4 py-3 gap-x-4 gap-y-3 flex-wrap'>
+			<aside class='flex border-y border-secondary-700 my-4 py-3 gap-x-4 gap-y-3 flex-wrap'>
 				<div class='flex flex-col gap-1'>
 					<span class='text-xs font-black uppercase'>País</span>
 					<span class='font-black text-white-transparent-700'>{country}</span>
 				</div>
 				<div class='flex flex-col gap-1'>
 					<span class='text-xs font-black uppercase'>Inicio</span>
-					<span class='font-black text-white-transparent-700'>{startDate}</span>
+					<DateTime date={startDate} class='font-black text-white-transparent-700'/>
 				</div>
 				<div class='flex flex-col gap-1'>
 					<span class='text-xs font-black uppercase'>Fin</span>
-					<span class='font-black text-white-transparent-700'>{endDate}</span>
+					<DateTime date={endDate} class='font-black text-white-transparent-700'/>
 				</div>
 				<div class='flex flex-col gap-1'>
 					<span class='text-xs font-black uppercase'>Rol</span>
 					<span class='font-black text-white-transparent-700'>{rol}</span>
 				</div>
-			</div>
+			</aside>
 
-			<div class='flex flex-wrap gap-2'>
+			<aside class='flex flex-wrap gap-2'>
 				{tags.map(tag => (
 					<span class={`border rounded-full py-1 px-3 font-medium ${
 						tag.highlight
 							? 'bg-accent-500 border-accent-300 text-slate-800'
 							: 'border-white-transparent-500'}`}>{tag.name}</span>
 				))}
-			</div>
+			</aside>
 		</div>
 	</a>
 

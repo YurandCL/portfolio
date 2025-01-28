@@ -6,12 +6,21 @@
       "@components/*": [
         "src/components/*"
       ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
       "@layouts/*": [
         "src/layouts/*"
-      ]
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@icons/*": [
+        "src/icons/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
     }
   }
 }

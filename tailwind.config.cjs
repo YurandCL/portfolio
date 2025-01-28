@@ -47,7 +47,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		plugin(function ({ addBase }) {
+		plugin(({ addBase }) => {
 			addBase({
 				button: { cursor: 'default' }
 			})

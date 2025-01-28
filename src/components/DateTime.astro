@@ -1,0 +1,14 @@
+---
+import { useFormatDate } from '@hooks/useFormatDate';
+
+export interface Props {
+  date?: string | number | Date;
+  options?: Intl.DateTimeFormatOptions;
+  class?: string
+}
+
+const {date, options, class: className} = Astro.props
+const newDate = date || 'Invalid date'
+const formatDate = useFormatDate({date, options})
+---
+<time datetime={`${newDate}`} class:list={[className]}>{formatDate}</time>
